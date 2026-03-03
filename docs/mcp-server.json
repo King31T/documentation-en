@@ -1,0 +1,21 @@
+{
+  "server": {
+    "name": "java-tron Docs",
+    "version": "1.0.0"
+  },
+  "resources": [
+    {
+      "uri": "https://king31t.github.io/documentation-en/sitemap.xml",
+      "name": "java-tron Documentation Sitemap",
+      "mimeType": "application/xml",
+      "description": "This is the sitemap for the project documentation. Please index these pages for the latest development guides and technical specifications."
+    }
+  ],
+  "prompts": [
+    {
+      "name": "Explain Project",
+      "description": "Explain project features based on docs",
+      "arguments": []
+    }
+  ]
+}
