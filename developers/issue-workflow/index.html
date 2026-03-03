@@ -1680,5 +1680,33 @@
       Ask AI
   </biel-button>
 
+  <script>
+    /**
+     * Forced Interceptor: Prevents keyboard events from bubbling up to MkDocs.
+     * This fixes the issue where typing keys like 's' or 'n' in the chatbot 
+     * triggers MkDocs' native search or navigation shortcuts.
+     */
+    window.addEventListener('keydown', function(e) {
+      // 1. Get the currently focused element (compatible with Shadow DOM)
+      const activeElement = e.composedPath()[0];
+      
+      // 2. Check if the focus is inside an input, textarea, or any Biel component
+      const isTyping = 
+        activeElement.tagName === 'INPUT' || 
+        activeElement.tagName === 'TEXTAREA' ||
+        activeElement.isContentEditable ||
+        e.composedPath().some(el => el.tagName && el.tagName.startsWith('BIEL-'));
+
+      if (isTyping) {
+        /**
+         * Core Logic: Stop the event immediately before MkDocs' scripts can hear it.
+         * This preserves the default typing behavior inside the input box 
+         * while "silencing" the global keyboard listeners of the Material theme.
+         */
+        e.stopImmediatePropagation();
+      }
+    }, { capture: true }); // Use capture phase to intercept the event as early as possible
+  </script>
+
   </body>
 </html>
