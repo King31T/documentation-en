@@ -212,7 +212,19 @@ public class ApiWrapper implements Api {
 
 Manually calling gRPC interfaces can be quite cumbersome in actual development. Trident is an official Java SDK provided by TRON, which has encapsulated most of the gRPC call work, including client construction, message serialization and deserialization, and complex operations like transaction signing and broadcasting. If you want to interact with TRON more conveniently, you can directly refer to or use Trident for gRPC calls.
 
-## 5. Related References and Documentation
+## 5. API Categories
+
+1. [Account Management](account-management/getaccount.md) - Account query, balance, and multi-signature verification
+2. [Assets and Tokens](assets-and-tokens/createassetissue.md) - TRC-10 asset issuance, transfer, and queries
+3. [Block Operations](block-operations/getblock.md) - Block query by number, ID, and range
+4. [Network Information](network-information/getbandwidthprices.md) - Node info, chain parameters, and pricing
+5. [Resource Management](resource-management/cancelallunfreezev2.md) - Energy, bandwidth, staking, and delegation
+6. [Smart Contracts](smart-contracts/clearcontractabi.md) - Contract deployment, triggering, and queries
+7. [Transaction Operations](transaction-operations/getpendingsize.md) - Transaction query and pending pool
+8. [Wallet Operations](wallet-operations/accountpermissionupdate.md) - Account creation, transfers, and broadcasting
+9. [Witness and Governance](witness-and-governance/createwitness.md) - Witness management, voting, proposals, and rewards
+
+## 6. Related References and Documentation
 
 * **TRON Protocol Buffers Definitions:**
   [https://github.com/tronprotocol/protocol](https://github.com/tronprotocol/protocol)
@@ -226,15 +238,3 @@ Manually calling gRPC interfaces can be quite cumbersome in actual development. 
   [https://github.com/tronprotocol/trident/](https://github.com/tronprotocol/trident/)
 * **Trident Documentation:**
   [https://tronprotocol.github.io/trident/](https://tronprotocol.github.io/trident/)
-
-## API Categories
-
-- [Account Management](account-management/getaccount.md) - Account query, balance, and multi-signature verification
-- [Assets and Tokens](assets-and-tokens/createassetissue.md) - TRC-10 asset issuance, transfer, and queries
-- [Block Operations](block-operations/getblock.md) - Block query by number, ID, and range
-- [Network Information](network-information/getbandwidthprices.md) - Node info, chain parameters, and pricing
-- [Resource Management](resource-management/cancelallunfreezev2.md) - Energy, bandwidth, staking, and delegation
-- [Smart Contracts](smart-contracts/clearcontractabi.md) - Contract deployment, triggering, and queries
-- [Transaction Operations](transaction-operations/getpendingsize.md) - Transaction query and pending pool
-- [Wallet Operations](wallet-operations/accountpermissionupdate.md) - Account creation, transfers, and broadcasting
-- [Witness and Governance](witness-and-governance/createwitness.md) - Witness management, voting, proposals, and rewards
