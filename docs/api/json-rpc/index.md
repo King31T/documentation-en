@@ -1,4 +1,4 @@
-# jsonRPC API
+# Overview
 
 JSON-RPC is a stateless, lightweight remote procedure call (RPC) protocol. The JSON-RPC interface supported by the TRON network is compatible with Ethereum's. However, due to the difference in chain mechanism and design, TRON cannot support some interfaces on Ethereum. At the same time, TRON also provides dedicated APIs to create different types of transactions.
 
@@ -6,7 +6,7 @@ JSON-RPC is a stateless, lightweight remote procedure call (RPC) protocol. The J
 
 - The JSON-RPC service needs to be enabled and set the port in the node configuration file. If not configured, the service is disable by default. 
 
-### How to enable or disable JSON-RPC service of a node
+## How to enable or disable JSON-RPC service of a node
 
 Add below items in node's [configuration file](https://github.com/tronprotocol/java-tron/blob/develop/framework/src/main/resources/config.conf), then enable or disable it:  
 ```
@@ -18,7 +18,7 @@ node.jsonrpc {
 }
 ```
 
-### HEX value encoding
+## HEX value encoding
 
 At present there are two key data types that are passed over JSON: unformatted byte arrays and quantities. Both are passed with a hex encoding, however with different requirements to formatting:
 
