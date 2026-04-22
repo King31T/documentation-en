@@ -58,7 +58,7 @@ uname -m
 
 - If your architecture is `x86_64` (Intel/AMD 64-bit):
 
-    - Install Java SE 8 (JDK 8 (latest minor version recommended)).
+    - Install Java SE 8 (JDK 8, latest minor version recommended).
     - Verify:
     ```bash
     java -version
