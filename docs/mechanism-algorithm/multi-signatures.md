@@ -124,40 +124,40 @@ The detailed information of `ContractType` is as follows (including Proto Messag
 | 4 | VoteWitnessContract | WitnessContract.VoteWitnessContract | VoteWitnessActuator | ✅ Enabled | Vote for SRs using account's TronPower; refresh voting records (takes effect at next maintenance) |
 | 5 | WitnessCreateContract | WitnessContract.WitnessCreateContract | WitnessCreateActuator | ✅ Enabled | Apply to become a Super Representative (SR) candidate; write to witness store |
 | 6 | AssetIssueContract | AssetIssueContractOuterClass.AssetIssueContract | AssetIssueActuator | ✅ Enabled | Issue TRC10 tokens; freeze balance during recruitment period according to ICO rules |
-| 7 | WitnessUpdateContract | WitnessContract.WitnessUpdateContract | WitnessUpdateActuator | ✅ Enabled | Update the official website URL of an SR |
-| 8 | ParticipateAssetIssueContract | AssetIssueContractOuterClass.ParticipateAssetIssueContract | ParticipateAssetIssueActuator | ✅ Enabled | Subscribe to TRC10 tokens with TRX during the ICO period |
-| 9 | AccountUpdateContract | AccountContract.AccountUpdateContract | UpdateAccountActuator | ✅ Enabled | Modify account name (subject to AllowUpdateAccountName constraint) |
-| 10 | FreezeBalanceContract | BalanceContract.FreezeBalanceContract | FreezeBalanceActuator | ✅ Enabled | Stake 1.0: Freeze TRX to gain Bandwidth/Energy; can be delegated to others |
-| 11 | UnfreezeBalanceContract | BalanceContract.UnfreezeBalanceContract | UnfreezeBalanceActuator | ✅ Enabled | Stake 1.0: Unfreeze TRX after expiration; release resources and clear votes |
-| 12 | WithdrawBalanceContract | BalanceContract.WithdrawBalanceContract | WithdrawBalanceActuator | ✅ Enabled | Withdraw SR block/voting rewards to account balance |
-| 13 | UnfreezeAssetContract | AssetIssueContractOuterClass.UnfreezeAssetContract | UnfreezeAssetActuator | ✅ Enabled | Issuer unfreezes TRC10 token shares frozen during ICO |
-| 14 | UpdateAssetContract | AssetIssueContractOuterClass.UpdateAssetContract | UpdateAssetActuator | ✅ Enabled | Update TRC10 token description / url / free bandwidth quota |
-| 15 | ProposalCreateContract | ProposalContract.ProposalCreateContract | ProposalCreateActuator | ✅ Enabled | SR creates an on-chain parameter proposal; written to ProposalStore for voting |
-| 16 | ProposalApproveContract | ProposalContract.ProposalApproveContract | ProposalApproveActuator | ✅ Enabled | SR approves or cancels a vote on a proposal |
-| 17 | ProposalDeleteContract | ProposalContract.ProposalDeleteContract | ProposalDeleteActuator | ✅ Enabled | Proposal creator withdraws their own created proposal |
-| 18 | SetAccountIdContract | AccountContract.SetAccountIdContract | SetAccountIdActuator | ✅ Enabled | Set a unique account_id for the account (can only be set once) |
-| 19 | CreateSmartContract | SmartContractOuterClass.CreateSmartContract | VMActuator | ✅ Enabled | Deploy a smart contract |
+| 8 | WitnessUpdateContract | WitnessContract.WitnessUpdateContract | WitnessUpdateActuator | ✅ Enabled | Update the official website URL of an SR |
+| 9 | ParticipateAssetIssueContract | AssetIssueContractOuterClass.ParticipateAssetIssueContract | ParticipateAssetIssueActuator | ✅ Enabled | Subscribe to TRC10 tokens with TRX during the ICO period |
+| 10 | AccountUpdateContract | AccountContract.AccountUpdateContract | UpdateAccountActuator | ✅ Enabled | Modify account name (subject to AllowUpdateAccountName constraint) |
+| 11 | FreezeBalanceContract | BalanceContract.FreezeBalanceContract | FreezeBalanceActuator | ✅ Enabled | Stake 1.0: Freeze TRX to gain Bandwidth/Energy; can be delegated to others |
+| 12 | UnfreezeBalanceContract | BalanceContract.UnfreezeBalanceContract | UnfreezeBalanceActuator | ✅ Enabled | Stake 1.0: Unfreeze TRX after expiration; release resources and clear votes |
+| 13 | WithdrawBalanceContract | BalanceContract.WithdrawBalanceContract | WithdrawBalanceActuator | ✅ Enabled | Withdraw SR block/voting rewards to account balance |
+| 14 | UnfreezeAssetContract | AssetIssueContractOuterClass.UnfreezeAssetContract | UnfreezeAssetActuator | ✅ Enabled | Issuer unfreezes TRC10 token shares frozen during ICO |
+| 15 | UpdateAssetContract | AssetIssueContractOuterClass.UpdateAssetContract | UpdateAssetActuator | ✅ Enabled | Update TRC10 token description / url / free bandwidth quota |
+| 16 | ProposalCreateContract | ProposalContract.ProposalCreateContract | ProposalCreateActuator | ✅ Enabled | SR creates an on-chain parameter proposal; written to ProposalStore for voting |
+| 17 | ProposalApproveContract | ProposalContract.ProposalApproveContract | ProposalApproveActuator | ✅ Enabled | SR approves or cancels a vote on a proposal |
+| 18 | ProposalDeleteContract | ProposalContract.ProposalDeleteContract | ProposalDeleteActuator | ✅ Enabled | Proposal creator withdraws their own created proposal |
+| 19 | SetAccountIdContract | AccountContract.SetAccountIdContract | SetAccountIdActuator | ✅ Enabled | Set a unique account_id for the account (can only be set once) |
 | 20 | CustomContract | | | 🚫 Disabled (Actuator not implemented) | |
-| 21 | TriggerSmartContract | SmartContractOuterClass.TriggerSmartContract | VMActuator | ✅ Enabled | Call/Trigger a smart contract |
-| 22 | UpdateSettingContract | SmartContractOuterClass.UpdateSettingContract | UpdateSettingContractActuator | ✅ Enabled | Contract owner modifies `consume_user_resource_percent` (percentage of energy borne by the user) |
-| 23 | ExchangeCreateContract | ExchangeContract.ExchangeCreateContract | ExchangeCreateActuator | ✅ Enabled | Create a Bancor exchange pair; inject initial liquidity for two assets |
-| 24 | ExchangeInjectContract | ExchangeContract.ExchangeInjectContract | ExchangeInjectActuator | ✅ Enabled | Inject liquidity into an existing exchange pair; deduct assets based on Bancor algorithm |
-| 25 | ExchangeWithdrawContract | ExchangeContract.ExchangeWithdrawContract | ExchangeWithdrawActuator | ✅ Enabled | Exchange pair creator redeems both assets from the pair proportionally |
-| 26 | ExchangeTransactionContract | ExchangeContract.ExchangeTransactionContract | ExchangeTransactionActuator | 🚫 Disabled (Hard-coded rejection by `Manager.java` after v4.8.0.1 fork, PR [#6507](https://github.com/tronprotocol/java-tron/pull/6507)) | Asset exchange via Bancor exchange pair |
-| 27 | UpdateEnergyLimitContract | SmartContractOuterClass.UpdateEnergyLimitContract | UpdateEnergyLimitContractActuator | ✅ Enabled | Contract owner updates `origin_energy_limit` (max energy consumption owner is willing to pay per call) |
-| 28 | AccountPermissionUpdateContract | AccountContract.AccountPermissionUpdateContract | AccountPermissionUpdateActuator | ✅ Enabled | Update account permissions: owner/witness/active |
-| 29 | ClearABIContract | SmartContractOuterClass.ClearABIContract | ClearABIContractActuator | ✅ Enabled | Contract owner clears contract ABI |
-| 30 | UpdateBrokerageContract | StorageContract.UpdateBrokerageContract | UpdateBrokerageActuator | ✅ Enabled | SR adjusts the brokerage ratio (0-100%) for voters |
-| 31 | ShieldedTransferContract | ShieldContract.ShieldedTransferContract | ShieldedTransferActuator | 🚫 Disabled (`getAllowShieldedTransaction` not enabled) | ZK-SNARK anonymous transfer (transparent in + shielded spend/receive + transparent out) |
+| 30 | CreateSmartContract | SmartContractOuterClass.CreateSmartContract | VMActuator | ✅ Enabled | Deploy a smart contract |
+| 31 | TriggerSmartContract | SmartContractOuterClass.TriggerSmartContract | VMActuator | ✅ Enabled | Call/Trigger a smart contract |
 | 32 | GetContract | | | 🚫 Disabled (Actuator not implemented) | |
-| 33 | MarketSellAssetContract | MarketContract.MarketSellAssetContract | MarketSellAssetActuator | 🚫 Disabled (`getAllowMarketTransaction` not enabled) | Place a limit sell order on the built-in order book (sell/buy two assets + price) |
-| 34 | MarketCancelOrderContract | MarketContract.MarketCancelOrderContract | MarketCancelOrderActuator | 🚫 Disabled (`getAllowMarketTransaction` not enabled) | Cancel own unexecuted market order; refund remaining assets |
-| 35 | FreezeBalanceV2Contract | BalanceContract.FreezeBalanceV2Contract | FreezeBalanceV2Actuator | ✅ Enabled | Stake 2.0: Freeze TRX to gain Bandwidth/Energy; decouples resources from TronPower |
-| 36 | UnfreezeBalanceV2Contract | BalanceContract.UnfreezeBalanceV2Contract | UnfreezeBalanceV2Actuator | ✅ Enabled | Stake 2.0: Initiate unstaking; enters unfreeze waiting period |
-| 37 | WithdrawExpireUnfreezeContract | BalanceContract.WithdrawExpireUnfreezeContract | WithdrawExpireUnfreezeActuator | ✅ Enabled | Withdraw unfrozen TRX that has passed the waiting period to account balance |
-| 38 | DelegateResourceContract | BalanceContract.DelegateResourceContract | DelegateResourceActuator | ✅ Enabled | Stake 2.0: Delegate own staked Bandwidth/Energy to other addresses (lock-up period optional) |
-| 39 | UnDelegateResourceContract | BalanceContract.UnDelegateResourceContract | UnDelegateResourceActuator | ✅ Enabled | Stake 2.0: Reclaim previously delegated resources from others |
-| 40 | CancelAllUnfreezeV2Contract | BalanceContract.CancelAllUnfreezeV2Contract | CancelAllUnfreezeV2Actuator | ✅ Enabled | Cancel all pending Stake 2.0 unfreezing requests; remaining shares are re-staked |
+| 33 | UpdateSettingContract | SmartContractOuterClass.UpdateSettingContract | UpdateSettingContractActuator | ✅ Enabled | Contract owner modifies `consume_user_resource_percent` (percentage of energy borne by the user) |
+| 41 | ExchangeCreateContract | ExchangeContract.ExchangeCreateContract | ExchangeCreateActuator | ✅ Enabled | Create a Bancor exchange pair; inject initial liquidity for two assets |
+| 42 | ExchangeInjectContract | ExchangeContract.ExchangeInjectContract | ExchangeInjectActuator | ✅ Enabled | Inject liquidity into an existing exchange pair; deduct assets based on Bancor algorithm |
+| 43 | ExchangeWithdrawContract | ExchangeContract.ExchangeWithdrawContract | ExchangeWithdrawActuator | ✅ Enabled | Exchange pair creator redeems both assets from the pair proportionally |
+| 44 | ExchangeTransactionContract | ExchangeContract.ExchangeTransactionContract | ExchangeTransactionActuator | 🚫 Disabled (Hard-coded rejection by `Manager.java` after v4.8.0.1 fork, PR [#6507](https://github.com/tronprotocol/java-tron/pull/6507)) | Asset exchange via Bancor exchange pair |
+| 45 | UpdateEnergyLimitContract | SmartContractOuterClass.UpdateEnergyLimitContract | UpdateEnergyLimitContractActuator | ✅ Enabled | Contract owner updates `origin_energy_limit` (max energy consumption owner is willing to pay per call) |
+| 46 | AccountPermissionUpdateContract | AccountContract.AccountPermissionUpdateContract | AccountPermissionUpdateActuator | ✅ Enabled | Update account permissions: owner/witness/active |
+| 48 | ClearABIContract | SmartContractOuterClass.ClearABIContract | ClearABIContractActuator | ✅ Enabled | Contract owner clears contract ABI |
+| 49 | UpdateBrokerageContract | StorageContract.UpdateBrokerageContract | UpdateBrokerageActuator | ✅ Enabled | SR adjusts the brokerage ratio (0-100%) for voters |
+| 51 | ShieldedTransferContract | ShieldContract.ShieldedTransferContract | ShieldedTransferActuator | 🚫 Disabled (`getAllowShieldedTransaction` not enabled) | ZK-SNARK anonymous transfer (transparent in + shielded spend/receive + transparent out) |
+| 52 | MarketSellAssetContract | MarketContract.MarketSellAssetContract | MarketSellAssetActuator | 🚫 Disabled (`getAllowMarketTransaction` not enabled) | Place a limit sell order on the built-in order book (sell/buy two assets + price) |
+| 53 | MarketCancelOrderContract | MarketContract.MarketCancelOrderContract | MarketCancelOrderActuator | 🚫 Disabled (`getAllowMarketTransaction` not enabled) | Cancel own unexecuted market order; refund remaining assets |
+| 54 | FreezeBalanceV2Contract | BalanceContract.FreezeBalanceV2Contract | FreezeBalanceV2Actuator | ✅ Enabled | Stake 2.0: Freeze TRX to gain Bandwidth/Energy; decouples resources from TronPower |
+| 55 | UnfreezeBalanceV2Contract | BalanceContract.UnfreezeBalanceV2Contract | UnfreezeBalanceV2Actuator | ✅ Enabled | Stake 2.0: Initiate unstaking; enters unfreeze waiting period |
+| 56 | WithdrawExpireUnfreezeContract | BalanceContract.WithdrawExpireUnfreezeContract | WithdrawExpireUnfreezeActuator | ✅ Enabled | Withdraw unfrozen TRX that has passed the waiting period to account balance |
+| 57 | DelegateResourceContract | BalanceContract.DelegateResourceContract | DelegateResourceActuator | ✅ Enabled | Stake 2.0: Delegate own staked Bandwidth/Energy to other addresses (lock-up period optional) |
+| 58 | UnDelegateResourceContract | BalanceContract.UnDelegateResourceContract | UnDelegateResourceActuator | ✅ Enabled | Stake 2.0: Reclaim previously delegated resources from others |
+| 59 | CancelAllUnfreezeV2Contract | BalanceContract.CancelAllUnfreezeV2Contract | CancelAllUnfreezeV2Actuator | ✅ Enabled | Cancel all pending Stake 2.0 unfreezing requests; remaining shares are re-staked |
 
 Active permissions configure which `ContractType` can be executed through the `operations` field. For details on how to calculate the value of `operations`, please see [Operations Value Calculation Example](#2-operations-value-calculation-example).
 
